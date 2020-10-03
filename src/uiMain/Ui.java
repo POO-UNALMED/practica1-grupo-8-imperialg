@@ -26,6 +26,13 @@ public class Ui {
 		estado = entrada.nextBoolean();
 		plataforma = entrada.next();
 	}
+	
+	public void ingresarCliente(String nombre,int cc,long celular,String email) {
+		nombre = entrada.next();
+		cc = entrada.nextInt();
+		celular = entrada.nextLong();
+		email = entrada.next();
+	}
 
 	public static void main(String[] Args) {
 		System.out.println("Hola");
