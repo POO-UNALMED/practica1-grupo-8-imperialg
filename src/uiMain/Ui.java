@@ -9,41 +9,47 @@ public class Ui {
 		DatosTranssacciones.guardarDatos();
 	}
 	Scanner entrada = new Scanner(System.in);
-	public void ingresarConsola(String nombre, boolean uso, String color, boolean estado, String version, int almacenamiento){
+	public void ingresarConsola(){
 		System.out.println("Ingrese nombre de consola: ");
-		nombre = entrada.next();
+		String nombre = entrada.next();
 		System.out.println("Ingrese uso(true or false): ");
-		uso = entrada.nextBoolean();
+		Boolean uso = entrada.nextBoolean();
 		System.out.println("Ingrese color: ");
-		color = entrada.next();
+		String color = entrada.next();
 		System.out.println("Ingrese estado(true or false): ");
-		estado = entrada.nextBoolean();
+		Boolean estado = entrada.nextBoolean();
 		System.out.println("Ingrese nombre de la version: ");
-		version = entrada.next();
+		String version = entrada.next();
 		System.out.println("Ingrese cantidad almacenamiento: ");
-		almacenamiento = entrada.nextInt();
+		int almacenamiento = entrada.nextInt();
+		Consola consola = new Consola(nombre,uso,color,estado,version,almacenamiento);
+		DatosProductos.agregarConsola(consola);
 	}
-	public void ingresarJuego(String nombre, boolean uso, int pegi, String plataforma, String genero){
+	public void ingresarJuego(){
 		System.out.println("Ingrese nombre del juego: ");
-		nombre = entrada.next();
+		String nombre = entrada.next();
 		System.out.println("Ingrese uso(true or false): ");
-		uso = entrada.nextBoolean();
+		Boolean uso = entrada.nextBoolean();
 		System.out.println("Ingrese pegi: ");
-		pegi = entrada.nextInt();
+		int pegi = entrada.nextInt();
 		System.out.println("Ingrese nombre plataforma: ");
-		plataforma = entrada.next();
+		String plataforma = entrada.next();
 		System.out.println("Ingrese genero: ");
-		genero = entrada.next();
+		String genero = entrada.next();
+		Juego juego= new Juego(nombre,uso,pegi,plataforma,genero);
+		DatosProductos.agregarJuego(juego);
 	}
-	public void ingresarPeriferico(String nombre, boolean uso, boolean estado, String plataforma){
+	public void ingresarPeriferico(){
 		System.out.println("Ingrese nombre de periferico: ");
-		nombre = entrada.next();
+		String nombre = entrada.next();
 		System.out.println("Ingrese uso(true or false): ");
-		uso = entrada.nextBoolean();
+		Boolean uso = entrada.nextBoolean();
 		System.out.println("Ingrese estado(true or false): ");
-		estado = entrada.nextBoolean();
+		Boolean estado = entrada.nextBoolean();
 		System.out.println("Ingrese nombre plataforma: ");
-		plataforma = entrada.next();
+		String plataforma = entrada.next();
+		Periferico periferico = new Periferico (nombre,uso,estado,plataforma);
+		DatosProductos.agregarPeriferico(periferico);
 	}
 	
 	public void ingresarCliente() {
@@ -63,12 +69,12 @@ public class Ui {
 		int indiceCliente = 1;
 		for (Cliente cliente: DatosTranssacciones.getListaClientes()){
 			System.out.println(indiceCliente + ":"+ cliente.getNombre() + "       " + cliente.getCc());
-		}//Sí selecciona un cliente se selecciona de la lista de clientes el cliente i-1.
-		//Sí el cliente no está registrado, se crea un nuevo objeto de la clase cliente y se añade a la lista.
+		}// si selecciona un cliente se selecciona de la lista de clientes el cliente i-1.
+		// si el cliente no esta registrado, se crea un nuevo objeto de la clase cliente y se a�ade a la lista.
 	}
 	public void iniciarTransaccion(){
 		boolean registrado = false;
-		//ingrese scanner
+		registrado = entrada.nextBoolean();
 		System.out.println("¿El cliente se encuentra registrado: Indique true sí lo está y false para registrarlo");
 		if (registrado){
 			ImprimeCliente.clientesRegistrados();
