@@ -1,6 +1,7 @@
 package uiMain;
 import gestorAplicacion.transacciones.*;
 import BaseDatos.*;
+import gestorAplicacion.producto.*;
 import java.util.Scanner;
 
 public class Ui {
