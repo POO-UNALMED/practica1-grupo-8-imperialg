@@ -20,17 +20,13 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:SerializaciónObjetos" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="799d2829-1bee-4068-b493-8888f1cf7f96" name="Default Changelist" comment="SerializaciónObjetos">
-      <change afterPath="$PROJECT_DIR$/src/uiMain/ImprimeCliente.java" afterDir="false" />
+    <list default="true" id="799d2829-1bee-4068-b493-8888f1cf7f96" name="Default Changelist" comment="FaltaUI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BaseDatos/DatosTranssacciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BaseDatos/DatosTranssacciones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gestorAplicacion/transacciones/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gestorAplicacion/transacciones/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uiMain/Ui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/uiMain/Ui.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +55,9 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1iF0wUzODKQQDVmiNe2wn22Rhto" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -68,6 +67,26 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Ui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="uiMain.Ui" />
+      <module name="practica1-grupo-8-imperialg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="uiMain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Ui" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -101,7 +120,28 @@
       <option name="project" value="LOCAL" />
       <updated>1601706798894</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Facturas">
+      <created>1601746323471</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601746323472</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Casimasvendidos">
+      <created>1602275318341</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1602275318342</updated>
+    </task>
+    <task id="LOCAL-00006" summary="FaltaUI">
+      <created>1602787048150</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602787048150</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,7 +155,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="SerializaciónObjetos" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -132,30 +172,68 @@
     <MESSAGE value="Constructores" />
     <MESSAGE value="ImprimirFactura" />
     <MESSAGE value="SerializaciónObjetos" />
-    <option name="LAST_COMMIT_MESSAGE" value="SerializaciónObjetos" />
+    <MESSAGE value="Facturas" />
+    <MESSAGE value="Casimasvendidos" />
+    <MESSAGE value="FaltaUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="FaltaUI" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1601743592180">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="544" y="130" key="#com.intellij.ide.util.MemberChooser" timestamp="1602786723600">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="-1155" y="176" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1920.-60.1920.1040@-1920.-60.1920.1040" timestamp="1601491816826" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601743592180" />
+    <state x="-1155" y="176" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1920.-60.1920.1040@-1920.-60.1920.1040" timestamp="1602524339733" />
+    <state x="544" y="130" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1920.-60.1920.1040@0.0.1366.728" timestamp="1602786723600" />
+    <state x="544" y="160" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1602522002059" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602645425911" />
+    <state x="477" y="190" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1602522851096">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="477" y="190" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1602522851096" />
     <state x="-1141" y="150" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1601491738550">
       <screen x="-1920" y="-60" width="1920" height="1040" />
     </state>
     <state x="-1141" y="150" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1366.728/-1920.-60.1920.1040@-1920.-60.1920.1040" timestamp="1601491738550" />
-    <state x="736" y="411" width="447" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1601703608082">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="524" y="288" width="447" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1602522852331">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="524" y="288" width="447" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1602522852331" />
     <state x="736" y="411" width="447" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1601703608082" />
-    <state x="342" y="119" key="new project wizard" timestamp="1601651477643">
+    <state x="-1230" y="206" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602524558616">
+      <screen x="-1920" y="-60" width="1920" height="1040" />
+    </state>
+    <state x="-1230" y="206" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/-1920.-60.1920.1040@-1920.-60.1920.1040" timestamp="1602524558616" />
+    <state x="739" y="260" key="FileChooserDialogImpl" timestamp="1602569102179">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="342" y="119" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1601651477643" />
-    <state x="616" y="242" key="run.anything.popup" timestamp="1601741458892">
+    <state x="739" y="260" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602569102179" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1602647149961">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601741458892" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602647149961" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1602647149960">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602647149960" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1602647149960">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602647149960" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1602647149960">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602647149960" />
+    <state x="342" y="119" key="new project wizard" timestamp="1602569109852">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="119" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1602569109852" />
+    <state x="463" y="107" key="refactoring.ChangeSignatureDialog" timestamp="1602785709909">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="107" key="refactoring.ChangeSignatureDialog/0.0.1366.728/-1920.-60.1920.1040@0.0.1366.728" timestamp="1602785709909" />
+    <state x="616" y="242" key="run.anything.popup" timestamp="1602646010037">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602646010037" />
     <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1601744668498">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

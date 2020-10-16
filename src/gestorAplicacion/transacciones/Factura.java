@@ -35,4 +35,13 @@ public class Factura {
     public Factura(Cliente cliente) {
         this.cliente = cliente;
     }
+
+    public String toString(){
+        String detas = "";
+        float total = 0;
+        for (Detalle detalle: detalles){
+            detas.concat(detalle.toString() + "\n");
+            total += detalle.getPrecio();
+        }
+        return idFactura + "   " + fecha + cliente.getNombre() + "\n" + detas + "total: " + total; }
 }

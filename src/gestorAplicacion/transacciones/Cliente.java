@@ -1,6 +1,5 @@
 package gestorAplicacion.transacciones;
-import BaseDatos.DatosTranssacciones;
-
+import java.util.ArrayList;
 import java.io.Serializable;
 
 public class Cliente implements Serializable {
@@ -10,9 +9,10 @@ public class Cliente implements Serializable {
     private long celular;
     private String email;
     private int puntos = 0;
+//    private ArrayList<Cliente> = new ArrayList<Cliente>()
 
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     public void setNombre(String nombre) {
@@ -56,7 +56,9 @@ public class Cliente implements Serializable {
         this.cc = cc;
         this.celular = celular;
         this.email = email;
-        DatosTranssacciones.agregarCliente(this);
     }
 
+    public String toString(){
+        return nombre + "    " + cc + "     " + puntos;
+    }
 }

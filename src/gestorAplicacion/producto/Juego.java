@@ -1,10 +1,10 @@
 package gestorAplicacion.producto;
-import BaseDatos.DatosProductos;
 
 public class Juego extends Producto {
     private int pegi;
     private String plataforma;
     private String genero;
+
 
     public int getPegi() {
         return pegi;
@@ -30,11 +30,15 @@ public class Juego extends Producto {
         this.genero = genero;
     }
 
-    public Juego(String nombre, boolean uso, int pegi, String plataforma, String genero) {
-        super(nombre, uso);
+    public Juego(String nombre, boolean uso, int unidades, float precio, int pegi, String plataforma, String genero) {
+        super(nombre, uso, unidades, precio);
         this.pegi = pegi;
         this.plataforma = plataforma;
         this.genero = genero;
-        DatosProductos.agregarJuego(this);
+    }
+
+    @Override
+    public String toString() {
+        return getNombre() + " " ;
     }
 }
