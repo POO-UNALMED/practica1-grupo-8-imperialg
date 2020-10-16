@@ -1,13 +1,11 @@
 package gestorAplicacion.producto;
-import java.util.ArrayList;
 
 public class Consola extends Producto {
     private String color;
-    private boolean estado;
     private String version;
     private int almacenamiento;
-    private static ArrayList<Consola> lista = new ArrayList<Consola>();
-
+    private int unidadesBuenas;
+    private int unidadesMalas;
 
     public String getColor() {
         return color;
@@ -15,14 +13,6 @@ public class Consola extends Producto {
 
     public void setColor(String color) {
         this.color = color;
-    }
-
-    public boolean isEstado() {
-        return estado;
-    }
-
-    public void setEstado(boolean estado) {
-        this.estado = estado;
     }
 
     public String getVersion() {
@@ -41,12 +31,20 @@ public class Consola extends Producto {
         this.almacenamiento = almacenamiento;
     }
 
-    public Consola(String nombre, boolean uso, String color, boolean estado, String version, int almacenamiento) {
-        super(nombre, uso);
+    public Consola(String nombre, boolean uso, int unidades, float precio, String color, boolean estado, String version, int almacenamiento) {
+        super(nombre, uso, unidades, precio);
         this.color = color;
-        this.estado = estado;
         this.version = version;
         this.almacenamiento = almacenamiento;
-        lista.add(this);
+        if (estado) {
+            this.unidadesMalas = unidades;
+        } else if (!estado) {
+            this.unidadesBuenas = unidades;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Consola: " + getNombre() + almacenamiento;
     }
 }

@@ -1,10 +1,14 @@
 package gestorAplicacion.producto;
+import java.io.Serializable;
 
-public class Producto {
+public abstract class Producto implements Serializable{
+    private static final long serialVersionUID = 1L;
     private int id = 1;
-    private String nombre;
-    public static int stock;
-    private boolean uso;
+    protected String nombre;
+    private int unidadesVendidas;
+    private int unidadesNuevas;
+    private int unidadesUsadas;
+    private float precio;
 
     public int getId() {
         return id;
@@ -22,24 +26,27 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public static int getStock() {
-        return stock;
+    public int getUnidadesNuevas() {
+        return unidadesNuevas;
     }
 
-    public static void setStock(int stock) {
-        Producto.stock = stock;
+    public int getUnidadesUsadas() {
+        return unidadesUsadas;
     }
 
-    public boolean isUso() {
-        return uso;
+    public int getUnidadesVendidas() {
+        return unidadesVendidas;
     }
 
-    public void setUso(boolean uso) {
-        this.uso = uso;
-    }
+    public abstract String toString();
 
-    public Producto(String nombre, boolean uso) {
+    public Producto(String nombre, boolean uso, int unidades, float precio) {
         this.nombre = nombre;
-        this.uso = uso;
+        this.precio = precio;
+        if (uso) {
+            this.unidadesUsadas = unidades;
+        } else if (!uso) {
+            this.unidadesNuevas = unidades;
+        }
     }
 }

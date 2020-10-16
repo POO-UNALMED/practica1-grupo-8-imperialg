@@ -1,19 +1,10 @@
 package gestorAplicacion.producto;
 
-import java.util.ArrayList;
-
 public class Periferico extends Producto {
-    private boolean estado;
     private String plataforma;
-    private static ArrayList<Periferico> lista = new ArrayList<Periferico>();
+    private int unidadesMalas;
+    private int unidadesBuenas;
 
-    public boolean isEstado() {
-        return estado;
-    }
-
-    public void setEstado(boolean estado) {
-        this.estado = estado;
-    }
 
     public String getPlataforma() {
         return plataforma;
@@ -23,10 +14,19 @@ public class Periferico extends Producto {
         this.plataforma = plataforma;
     }
 
-    public Periferico(String nombre, boolean uso, boolean estado, String plataforma) {
-        super(nombre, uso);
-        this.estado = estado;
+    public Periferico(String nombre, boolean uso, int unidades, float precio, boolean estado, String plataforma) {
+        super(nombre, uso, unidades, precio);
+        if (estado) {
+            this.unidadesMalas = unidades;
+        } else if (!estado) {
+            this.unidadesBuenas = unidades;
+        }
         this.plataforma = plataforma;
-        lista.add(this);
+    }
+
+    @Override
+    public String toString() {
+        return getNombre() + " " + plataforma + " " +  unidadesBuenas;
     }
 }
+

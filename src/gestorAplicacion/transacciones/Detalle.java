@@ -3,19 +3,18 @@ package gestorAplicacion.transacciones;
 import gestorAplicacion.producto.Producto;
 
 public class Detalle {
-    private int id;
+    private static int idDetalle;
     private Factura factura;
-    private Producto producto;
+    public Producto producto;
     private int cantidad;
     private float precio;
     private String tiposervicio;
+    private int ganancia;
 
-    public int getId() {
-        return id;
-    }
+    
 
-    public void setId(int id) {
-        this.id = id;
+    public static int getId() {
+        return idDetalle;
     }
 
     public Factura getFactura() {
@@ -48,5 +47,18 @@ public class Detalle {
 
     public void setTiposervicio(String tiposervicio) {
         this.tiposervicio = tiposervicio;
+    }
+
+    public Detalle(Factura factura, Producto producto, int cantidad, float precio, String tiposervicio) {
+        this.factura = factura;
+        this.producto = producto;
+        this.cantidad = cantidad;
+        this.precio = precio;
+        this.tiposervicio = tiposervicio;
+    }
+
+    @Override
+    public String toString() {
+        return "    " + idDetalle + " " + tiposervicio + " " + producto + " " + cantidad + " " + precio;
     }
 }

@@ -1,14 +1,18 @@
 package gestorAplicacion.transacciones;
+import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Cliente {
+public class Cliente implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String nombre;
     private int cc;
     private long celular;
     private String email;
-    private int puntos;
+    private int puntos = 0;
+//    private ArrayList<Cliente> = new ArrayList<Cliente>()
 
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     public void setNombre(String nombre) {
@@ -46,5 +50,15 @@ public class Cliente {
     public void setPuntos(int puntos) {
         this.puntos = puntos;
     }
-   
+
+    public Cliente(String nombre, int cc, long celular, String email) {
+        this.nombre = nombre;
+        this.cc = cc;
+        this.celular = celular;
+        this.email = email;
+    }
+
+    public String toString(){
+        return nombre + "    " + cc + "     " + puntos;
+    }
 }
