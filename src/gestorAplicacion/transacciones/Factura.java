@@ -36,6 +36,11 @@ public class Factura {
         this.cliente = cliente;
     }
 
+    public Factura(Cliente cliente, ArrayList<Detalle> detalles) {
+        this.cliente = cliente;
+        this.detalles = detalles;
+    }
+
     public String toString(){
         String detas = "";
         float total = 0;

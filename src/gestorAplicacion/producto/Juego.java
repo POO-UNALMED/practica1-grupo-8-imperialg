@@ -30,8 +30,8 @@ public class Juego extends Producto {
         this.genero = genero;
     }
 
-    public Juego(String nombre, boolean uso, int unidades, float precio, int pegi, String plataforma, String genero) {
-        super(nombre, uso, unidades, precio);
+    public Juego(String nombre, boolean uso, float precio, int pegi, String plataforma, String genero) {
+        super(nombre, uso, precio);
         this.pegi = pegi;
         this.plataforma = plataforma;
         this.genero = genero;
@@ -39,6 +39,6 @@ public class Juego extends Producto {
 
     @Override
     public String toString() {
-        return getNombre() + " " ;
+        return getNombre() + " " + plataforma + getPrecio() ;
     }
 }

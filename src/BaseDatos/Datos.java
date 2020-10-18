@@ -3,11 +3,13 @@ package BaseDatos;
 import gestorAplicacion.producto.Consola;
 import gestorAplicacion.producto.Juego;
 import gestorAplicacion.producto.Periferico;
+import gestorAplicacion.producto.Producto;
 import gestorAplicacion.transacciones.Cliente;
 import gestorAplicacion.transacciones.Factura;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Datos{
     private ArrayList<Consola> listaConsolas = new ArrayList<Consola>();
@@ -15,6 +17,7 @@ public class Datos{
     private ArrayList<Periferico> listaPerifericos = new ArrayList<Periferico>();
     private ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();
     private ArrayList<Factura> listaFacturas = new ArrayList<Factura>();
+    Scanner entrada = new Scanner(System.in);
 
     //Agregar productos:
 
@@ -37,6 +40,30 @@ public class Datos{
         listaFacturas.add(factura);
     }
 
+    public void venderJuego(){}
+
+    // Seleccionar elementos de listas:
+    public ArrayList<Producto> juegoPorIndice(int[] ints){
+        ArrayList<Producto> nuevaLista = new ArrayList<Producto>();
+        for (int i: ints){
+            nuevaLista.add(this.listaJuegos.get(i-1));
+        }
+        return nuevaLista;
+    }
+    public ArrayList<Producto> consolaPorIndice(int[] ints){
+        ArrayList<Producto> nuevaLista = new ArrayList<Producto>();
+        for (int i: ints){
+            nuevaLista.add(this.listaConsolas.get(i-1));
+        }
+        return nuevaLista;
+    }
+    public ArrayList<Producto> perifericoPorIndice(int[] ints){
+        ArrayList<Producto> nuevaLista = new ArrayList<Producto>();
+        for (int i: ints){
+            nuevaLista.add(this.listaPerifericos.get(i-1));
+        }
+        return nuevaLista;
+    }
     //Guardar datos de productos
     public void guardarDatos() {
         try {
@@ -62,6 +89,10 @@ public class Datos{
         }
     }
 
+    public Cliente seleccionarCliente(int i){
+        Cliente cliente = listaClientes.get(i);
+        return cliente;
+    }
     public void leerDatos() {
         try {
             FileInputStream ci = new FileInputStream("src/BaseDatos/temp/Consolas.txt");
@@ -130,7 +161,7 @@ public class Datos{
             e.printStackTrace();
         }
     }
-    public Juego juegoMasVendido() {
+   /* public Juego juegoMasVendido() {
         Juego masvendido = listaJuegos.get(0);
         for (Juego juego : listaJuegos) {
             if (juego.getUnidadesVendidas() > masvendido.getUnidadesVendidas()) {
@@ -138,9 +169,83 @@ public class Datos{
             }
         }
         return masvendido;
+    }*/
+
+    public void ingresarConsola() {
+        System.out.println("Ingrese nombre de consola: ");
+        String nombre = entrada.next();
+        System.out.println("Ingrese uso(true or false): ");
+        Boolean uso = entrada.nextBoolean();
+        System.out.println("Ingrese precio ");
+        float precio = entrada.nextFloat();
+        System.out.println("Ingrese color: ");
+        String color = entrada.next();
+        System.out.println("Ingrese nombre de la version: ");
+        String version = entrada.next();
+        System.out.println("Ingrese cantidad almacenamiento: ");
+        int almacenamiento = entrada.nextInt();
+        Consola consola = new Consola(nombre, uso, precio, color, version, almacenamiento);
+        this.agregarConsola(consola);
+    }
+    public void ingresarJuego() {
+        System.out.println("Ingrese nombre de consola: ");
+        String nombre = entrada.next();
+        System.out.println("Ingrese uso(true or false): ");
+        Boolean uso = entrada.nextBoolean();
+        System.out.println("Ingrese precio ");
+        float precio = entrada.nextFloat();
+        System.out.println("Ingrese pegi: ");
+        int pegi = entrada.nextInt();
+        System.out.println("Ingrese nombre plataforma: ");
+        String plataforma = entrada.next();
+        System.out.println("Ingrese genero: ");
+        String genero = entrada.next();
+        Juego juego = new Juego(nombre, uso, precio, pegi, plataforma, genero);
+        this.agregarJuego(juego);
     }
 
+    public void ingresarPeriferico() {
+        System.out.println("Ingrese nombre de consola: ");
+        String nombre = entrada.next();
+        System.out.println("Ingrese uso(true or false): ");
+        Boolean uso = entrada.nextBoolean();
+        System.out.println("Ingrese precio ");
+        float precio = entrada.nextFloat();
+        System.out.println("Ingrese nombre plataforma: ");
+        String plataforma = entrada.next();
+        Periferico periferico = new Periferico(nombre, uso, precio, plataforma);
+        this.agregarPeriferico(periferico);
+    }
+
+    public void ingresarCliente() {
+        System.out.println("Ingrese nombre de Cliente: ");
+        String nombre = entrada.next();
+        System.out.println("Ingrese cedula: ");
+        int cc = entrada.nextInt();
+        System.out.println("Ingrese celular: ");
+        long celular = entrada.nextLong();
+        System.out.println("Ingrese email: ");
+        String email = entrada.next();
+        Cliente cliente = new Cliente(nombre, cc, celular, email);
+        this.agregarClientes(cliente);
+    }
+// Obtener accesoa a listas:
     public ArrayList<Cliente> getListaClientes() {
         return listaClientes;
+    }
+    public ArrayList<Consola> getListaConsolas() {
+        return listaConsolas;
+    }
+
+    public ArrayList<Juego> getListaJuegos() {
+        return listaJuegos;
+    }
+
+    public ArrayList<Periferico> getListaPerifericos() {
+        return listaPerifericos;
+    }
+
+    public ArrayList<Factura> getListaFacturas() {
+        return listaFacturas;
     }
 }

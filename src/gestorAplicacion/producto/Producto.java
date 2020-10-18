@@ -5,10 +5,16 @@ public abstract class Producto implements Serializable{
     private static final long serialVersionUID = 1L;
     private int id = 1;
     protected String nombre;
-    private int unidadesVendidas;
-    private int unidadesNuevas;
-    private int unidadesUsadas;
     private float precio;
+    private Boolean uso;
+
+    public float getPrecio() {
+        return precio;
+    }
+
+    public Boolean getUso() {
+        return uso;
+    }
 
     public int getId() {
         return id;
@@ -26,27 +32,12 @@ public abstract class Producto implements Serializable{
         this.nombre = nombre;
     }
 
-    public int getUnidadesNuevas() {
-        return unidadesNuevas;
-    }
-
-    public int getUnidadesUsadas() {
-        return unidadesUsadas;
-    }
-
-    public int getUnidadesVendidas() {
-        return unidadesVendidas;
-    }
 
     public abstract String toString();
 
-    public Producto(String nombre, boolean uso, int unidades, float precio) {
+    public Producto(String nombre, boolean uso, float precio) {
         this.nombre = nombre;
         this.precio = precio;
-        if (uso) {
-            this.unidadesUsadas = unidades;
-        } else if (!uso) {
-            this.unidadesNuevas = unidades;
-        }
+        this.uso = uso;
     }
 }

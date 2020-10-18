@@ -2,8 +2,6 @@ package gestorAplicacion.producto;
 
 public class Periferico extends Producto {
     private String plataforma;
-    private int unidadesMalas;
-    private int unidadesBuenas;
 
 
     public String getPlataforma() {
@@ -14,19 +12,14 @@ public class Periferico extends Producto {
         this.plataforma = plataforma;
     }
 
-    public Periferico(String nombre, boolean uso, int unidades, float precio, boolean estado, String plataforma) {
-        super(nombre, uso, unidades, precio);
-        if (estado) {
-            this.unidadesMalas = unidades;
-        } else if (!estado) {
-            this.unidadesBuenas = unidades;
-        }
+    public Periferico(String nombre, boolean uso, float precio, String plataforma) {
+        super(nombre, uso, precio);
         this.plataforma = plataforma;
     }
 
     @Override
     public String toString() {
-        return getNombre() + " " + plataforma + " " +  unidadesBuenas;
+        return getNombre() + " " + plataforma + getPrecio();
     }
 }
 
