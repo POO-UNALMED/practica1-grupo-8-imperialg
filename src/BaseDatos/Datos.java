@@ -1,3 +1,10 @@
+/*1). En las fuentes se incluirá la siguiente documentación:
+         Cabecera del archivo: funcionalidad del módulo, autores, componentes del módulo, etc.
+         Cabeceras en las clases, explicando su finalidad y describiendo las estructuras de datos definidas cuando
+        sean relevantes.
+         Cabeceras en los métodos, comentando su propósito y describiendo los parámetros de entrada/salida.
+         Comentarios en líneas de código de relevante interés o importancia.
+         Otros aspectos de interés a tener en cuenta por el profesor.*/
 package BaseDatos;
 
 import gestorAplicacion.producto.Consola;
@@ -5,6 +12,7 @@ import gestorAplicacion.producto.Juego;
 import gestorAplicacion.producto.Periferico;
 import gestorAplicacion.producto.Producto;
 import gestorAplicacion.transacciones.Cliente;
+import gestorAplicacion.transacciones.Detalle;
 import gestorAplicacion.transacciones.Factura;
 
 import java.io.*;
@@ -21,7 +29,7 @@ public class Datos{
 
     //Agregar productos:
 
-    public  void agregarConsola(Consola consola) {
+    public void agregarConsola(Consola consola) {
         listaConsolas.add(consola);
     }
     public void agregarJuego(Juego juego) {
@@ -229,6 +237,10 @@ public class Datos{
         Cliente cliente = new Cliente(nombre, cc, celular, email);
         this.agregarClientes(cliente);
     }
+    public Cliente seleccionarUltimoCliente(){
+        Cliente cliente = listaClientes.get(listaClientes.size() - 1);
+        return  cliente;
+    }
 // Obtener accesoa a listas:
     public ArrayList<Cliente> getListaClientes() {
         return listaClientes;
@@ -247,5 +259,19 @@ public class Datos{
 
     public ArrayList<Factura> getListaFacturas() {
         return listaFacturas;
+    }   
+
+
+    public void generarFacturaVenta(ArrayList<Producto> productos, Cliente cliente){
+        ArrayList<Detalle> listaDetalles = new ArrayList<Detalle>();
+        for (Producto producto: productos){
+            Detalle detalle = new Detalle(producto, producto.getPrecio(), "Venta");
+            listaDetalles.add(detalle);
+        }
+        Factura factura = new Factura(cliente, listaDetalles);
+        this.agregarFactura(factura);
+        System.out.println("Su venta ha sido realizada correctamente");
+        System.out.println(factura);
+
     }
 }
